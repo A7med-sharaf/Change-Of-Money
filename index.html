@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="./male_and_female_22010.ico">
+    <title> Change Of Money </title>
+</head>
+
+<body >
+<div class="card " style="padding-bottom: 9%; box-shadow: 5px 6px 11px ;">
+
+<div class="box container text-center col-12 col-lg-6 col-md-3 col-sm-2" style="margin-top: 15%;  ">
+<!--  
+  <select name="countries" id="countries" style="margin-bottom: 30px;"> 
+    
+    <option>اجنبية</option>
+    <option>سوداني</option>
+  </select>  -->
+  <br>
+ 
+  <form  style="display: flex; justify-content: center; ">
+    <div class="row">
+      <div class="form-group col-lg-6">
+        <span > المبلغ</span>
+    <input id="input-number1" class="form-control" type="number" > 
+    </div>
+    <br>
+    <div class="form-group col-lg-6">
+     <span >سعر اليوم</span>
+    <input id="input-number2" class="form-control" type="number">
+  </div>
+</div>
+</form>
+
+  <br>
+  <button id="btn1" class="btn btn-primary" style="position: relative; top: 10px;"> بنكك</button><br>
+  <button id="btn2" class="btn btn-primary" style="position: relative; top: 20px;"> اجنبي</button>
+</div>
+
+
+</div>
+
+
+
+<h2 id="result-text" style="display: flex; justify-content: center; margin-top: 10%;">Result</h2>
+</body>
+<script>
+  // alert("هلا انت سوداني")
+  document.getElementById("btn1").addEventListener("click",function(){
+    // console.log("click")
+  
+    var number1=document.getElementById("input-number1").value
+    var number2=document.getElementById("input-number2").value
+    
+   
+    var sum=number1/number2
+      document.getElementById("result-text").innerHTML=sum
+    
+
+    
+    var number1=document.getElementById("input-number1").value=""
+    var number2=document.getElementById("input-number2").value=""
+  })
+  
+
+  
+  document.getElementById("btn2").addEventListener("click",function(){
+    // console.log("click")
+   
+    var number1=document.getElementById("input-number1").value
+    var number2=document.getElementById("input-number2").value
+    
+    
+   
+    var sum=number1*number2
+      document.getElementById("result-text").innerHTML=sum
+    
+
+    
+    var number1=document.getElementById("input-number1").value=""
+    var number2=document.getElementById("input-number2").value=""
+  })
+  
+
+</script>
+</html>

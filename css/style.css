@@ -1,0 +1,32 @@
+body{
+  height: 120vh;
+}
+/* 
+.box{
+    
+} */
+span{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: aliceblue;
+    position: relative;
+    top: -10px;
+}
+.btn {
+    padding: 10px 40px;
+    font-weight: 500;
+    font-size: 17px;
+
+}
+option{
+    font-weight: 500;
+}
+.card{
+    background-color: rgb(150, 45, 6);
+    background-repeat: none;
+    background-size:cover ;
+}
+input{
+    margin-bottom: 30px;
+}
