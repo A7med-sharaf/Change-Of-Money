@@ -13,12 +13,12 @@
 <div class="card " style="padding-bottom: 9%; box-shadow: 5px 6px 11px ;">
 
 <div class="box container text-center col-12 col-lg-6 col-md-3 col-sm-2" style="margin-top: 15%;  ">
-<!--  
+
   <select name="countries" id="countries" style="margin-bottom: 30px;"> 
     
-    <option>اجنبية</option>
-    <option>سوداني</option>
-  </select>  -->
+    <option value="sel-1">أجنبي</option>
+    <option value="sel-2>سوداني</option>
+  </select>  
   <br>
  
   <form  style="display: flex; justify-content: center; ">
@@ -36,8 +36,8 @@
 </form>
 
   <br>
-  <button id="btn1" class="btn btn-primary" style="position: relative; top: 10px;"> بنكك</button><br>
-  <button id="btn2" class="btn btn-primary" style="position: relative; top: 20px;"> اجنبي</button>
+  <button id="btn1" class="btn btn-primary" style="position: relative; top: 10px;"> تحويل</button><br>
+  
 </div>
 
 
@@ -51,14 +51,23 @@
   // alert("هلا انت سوداني")
   document.getElementById("btn1").addEventListener("click",function(){
     // console.log("click")
-  
+    
     var number1=document.getElementById("input-number1").value
     var number2=document.getElementById("input-number2").value
     
+
    
-    var sum=number1/number2
+    if(document.getElementById("countries").value=="sel-1"){
+      var sum=number1*number2
       document.getElementById("result-text").innerHTML=sum
-    
+     
+    }else if(document.getElementById("countries").value=="sel-2"){
+      var div=number1/number2
+      document.getElementById("result-text").innerHTML=div
+    }else {
+      document.getElementById("result-text").innerHTML="go up select frist"
+
+    }
 
     
     // var number1=document.getElementById("input-number1").value=""
@@ -67,22 +76,22 @@
   
 
   
-  document.getElementById("btn2").addEventListener("click",function(){
-    // console.log("click")
+  // document.getElementById("btn2").addEventListener("click",function(){
+  //   // console.log("click")
    
-    var number1=document.getElementById("input-number1").value
-    var number2=document.getElementById("input-number2").value
+  //   var number1=document.getElementById("input-number1").value
+  //   var number2=document.getElementById("input-number2").value
     
     
    
-    var sum=number1*number2
-      document.getElementById("result-text").innerHTML=sum
+  //   var sum=number1*number2
+  //     document.getElementById("result-text").innerHTML=sum
     
 
     
-    // var number1=document.getElementById("input-number1").value=""
-    // var number2=document.getElementById("input-number2").value=""
-  })
+  //   // var number1=document.getElementById("input-number1").value=""
+  //   // var number2=document.getElementById("input-number2").value=""
+  // })
   
 
 </script>
